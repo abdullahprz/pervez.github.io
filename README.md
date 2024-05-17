@@ -1,8 +1,3 @@
 # personal website
 
-pervez.me 
-pervez.me 
-pervez.me 
-pervez.me 
-pervez.me 
-pervez.me 
+uhhhhhhhhhh https://ap14-s.github.io/
