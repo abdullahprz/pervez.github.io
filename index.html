@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap');
+			@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;900&display=swap');
 			html { 
 				background: url(https://pervez.ca/lazaridis.jpg) no-repeat center center fixed; 
 				-webkit-background-size: cover;
@@ -11,11 +11,32 @@
 				background-size: cover;
 			}
 			.topLevel {
-				display: grid;
-				place-items: center;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
 				height: 80vh;
 				color: #FFFFFF;
 				text-align: center;
+				font-family: 'Averia Serif Libre', serif;
+			}
+			.titleGroup {
+				margin-bottom: 6vh;
+			}
+			.title {
+				font-size: 8vh;
+				margin: 0;
+			}
+			.subheading {
+				font-size: 3vh;
+				margin-top: 1vh;
+				font-weight: 400;
+			}
+			.bold {
+				font-weight: 900;
+			}
+			.light {
+				font-weight: 400;
 			}
 			.iconsGroup {
 				display: flex;
@@ -25,7 +46,7 @@
 				opacity: 0.7;
 			}
 			img {
-				width: 6vh;
+				width: 7vh;
 				padding: 1vh;
 			}
 		</style>
@@ -34,10 +55,13 @@
 	</head>
 	<body>
 		<div class="topLevel">
-			<font style="font-size:8vh;" face="Averia Serif Libre"> 
-				abdullah pervez*
-			</font>
-			<div class ="iconsGroup">
+			<div class="titleGroup">
+				<div class="title">
+					<span class="light">abdullah</span> <span class="bold">pervez</span>
+				</div>
+				<div class="subheading">first-year business administration student<br>wilfrid laurier university</div>
+			</div>
+			<div class="iconsGroup">
 				<div class="icons instagram">
 					<a href="https://instagram.com/abdullahprz/">
 			  			<img src="https://img.icons8.com/sf-black-filled/128/FFFFFF/instagram-new.png"/>
