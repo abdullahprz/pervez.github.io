@@ -1,88 +1,173 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<style>
-			@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;900&display=swap');
-			html { 
-				background: url(https://pervez.ca/lazaridis.jpg) no-repeat center center fixed; 
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
-			}
-			.topLevel {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				height: 80vh;
-				color: #FFFFFF;
-				text-align: center;
-				font-family: 'Averia Serif Libre', serif;
-			}
-			.titleGroup {
-				margin-bottom: 6vh;
-			}
-			.title {
-				font-size: 8vh;
-				margin: 0;
-			}
-			.subheading {
-				font-size: 3vh;
-				margin-top: 1vh;
-				font-weight: 400;
-			}
-			.bold {
-				font-weight: 900;
-			}
-			.light {
-				font-weight: 400;
-			}
-			.iconsGroup {
-				display: flex;
-				place-items: center;
-			}
-			.icons:hover {
-				opacity: 0.7;
-			}
-			img {
-				width: 7vh;
-				padding: 1vh;
-			}
-		</style>
-		<title>Contact Abdullah Pervez - Business Student at Wilfrid Laurier University</title>
-		<link rel="icon" href="/favicon.ico">
-	</head>
-	<body>
-		<div class="topLevel">
-			<div class="titleGroup">
-				<div class="title">
-					<span class="light">abdullah</span> <span class="bold">pervez</span>
-				</div>
-				<div class="subheading">first-year business administration student<br>wilfrid laurier university</div>
-			</div>
-			<div class="iconsGroup">
-				<div class="icons instagram">
-					<a href="https://instagram.com/abdullahprz/">
-			  			<img src="https://img.icons8.com/sf-black-filled/128/FFFFFF/instagram-new.png"/>
-					</a>
-				</div>
-				<div class="icons discord">
-					<a href="https://discordapp.com/users/838955243835621376">
-			 			<img src="https://img.icons8.com/sf-black-filled/128/FFFFFF/discord.png"/>
-					</a>
-				</div>
-				<div class="icons github">
-					<a href="https://github.com/abdullahprz">
-			 			<img src="https://img.icons8.com/sf-black-filled/128/FFFFFF/github.png"/>
-					</a>
-				</div>
-				<div class="icons mail">
-					<a href="mailto:perv0886@mylaurier.ca">
-						<img src="https://img.icons8.com/sf-black-filled/128/FFFFFF/new-post.png"/>
-					</a>
-				</div>
-			</div>
-		</div>
-	</body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Abdullah Pervez - Business Student at Wilfrid Laurier University</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --font-main: 'Averia Serif Libre', serif;
+      --color-text: #ffffff;
+      --icon-size: 2.5rem;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: var(--font-main);
+      background: url('https://pervez.ca/lazaridis.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--color-text);
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: white;
+      animation: fadeOut 3s ease forwards;
+      z-index: 10;
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      opacity: 0;
+      animation: fadeInContainer 0s ease forwards;
+      animation-delay: 0s;
+    }
+
+    @keyframes fadeInContainer {
+      to { opacity: 1; }
+    }
+
+    .title {
+      font-size: 5rem;
+      font-weight: 400;
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .title .bold {
+      font-weight: 700;
+    }
+
+    .subheading {
+      font-size: 2rem;
+      margin-top: 0rem;
+      line-height: 1.5;
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards;
+      animation-delay: 1s;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 9rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .icon-link {
+      opacity: 0;
+    }
+
+    .icon-link:nth-child(1) {
+      animation: fadeIn 0.25s ease forwards;
+      animation-delay: 2s;
+    }
+
+    .icon-link:nth-child(2) {
+      animation: fadeIn 0.25s ease forwards;
+      animation-delay: 2.25s;
+    }
+
+    .icon-link:nth-child(3) {
+      animation: fadeIn 0.25s ease forwards;
+      animation-delay: 2.5s;
+    }
+
+    .icon-link:nth-child(4) {
+      animation: fadeIn 0.25s ease forwards;
+      animation-delay: 2.75s;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .icon-link img {
+      width: var(--icon-size);
+      transition: opacity 0.3s ease;
+    }
+
+    .icon-link img:hover {
+      opacity: 0.7;
+    }
+
+    @media (min-width: 768px) {
+      .title {
+        font-size: 4rem;
+      }
+
+      .subheading {
+        font-size: 1.25rem;
+      }
+
+      .icon-link img {
+        width: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <main class="container">
+    <header>
+      <h1 class="title"><span class="light">abdullah</span> <span class="bold">pervez</span></h1>
+      <p class="subheading">
+        first-year business administration student<br>
+        wilfrid laurier university
+      </p>
+    </header>
+    <section class="icons">
+      <a class="icon-link" href="https://instagram.com/abdullahprz/">
+        <img src="https://img.icons8.com/sf-black-filled/128/FFFFFF/instagram-new.png" alt="Instagram">
+      </a>
+      <a class="icon-link" href="https://discordapp.com/users/838955243835621376">
+        <img src="https://img.icons8.com/sf-black-filled/128/FFFFFF/discord.png" alt="Discord">
+      </a>
+      <a class="icon-link" href="https://github.com/abdullahprz">
+        <img src="https://img.icons8.com/sf-black-filled/128/FFFFFF/github.png" alt="GitHub">
+      </a>
+      <a class="icon-link" href="mailto:perv0886@mylaurier.ca">
+        <img src="https://img.icons8.com/sf-black-filled/128/FFFFFF/new-post.png" alt="Email">
+      </a>
+    </section>
+  </main>
+</body>
 </html>
